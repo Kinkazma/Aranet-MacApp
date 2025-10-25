@@ -2,17 +2,12 @@
 
 > Application macOS (SwiftUI) pour connecter, lire et synchroniser un capteur **Aranet4** via **Bluetooth Low Energy**, afficher des **graphiques** (CO₂, température, humidité, pression), exporter/importer en **CSV**, gérer **plusieurs appareils** et planifier des **récupérations automatiques** au-delà de 4 mois.
 
-<p align="center">
-  <img src="Aranet4.icns" alt="Aranet4.icns" width="96" />
-</p>
-
 ---
 
 ## Table des matières
 
 - [Aperçu](#aperçu)
 - [Fonctionnalités](#fonctionnalités)
-- [Captures d’écran](#captures-décran)
 - [Prérequis](#prérequis)
 - [Installation](#installation)
   - [Depuis les sources](#depuis-les-sources)
@@ -27,14 +22,11 @@
   - [Schéma d’ensemble](#schéma-densemble)
   - [Fichiers principaux](#fichiers-principaux)
   - [Caractéristiques BLE Aranet4 (UUIDs)](#caractéristiques-ble-aranet4-uuids)
-  - [Modèle de données](#modèle-de-données)
   - [Stockage et fichiers générés](#stockage-et-fichiers-générés)
 - [Permissions et confidentialité](#permissions-et-confidentialité)
 - [Dépannage](#dépannage)
 - [Développement](#développement)
   - [Exigences outil / build](#exigences-outil--build)
-  - [Qualité et style](#qualité-et-style)
-  - [Roadmap](#roadmap)
 - [Crédits et références](#crédits-et-références)
 - [Licence](#licence)
 
@@ -67,23 +59,6 @@
 
 ---
 
-## Captures d’écran
-
-> *(Placeholders – à compléter dans le dépôt)*
->
-> - `docs/screenshot-main-light.png` : Vue principale (thème clair)  
-> - `docs/screenshot-main-dark.png` : Vue principale (thème sombre)  
-> - `docs/screenshot-menubar.png` : Popover barre de menus  
-> - `docs/screenshot-devices.png` : Gestion des appareils  
->
-> Vous pouvez référencer les images comme suit :
->
-> ```md
-> ![Vue principale](docs/screenshot-main-light.png)
-> ```
-
----
-
 ## Prérequis
 
 - macOS **13.0** (Ventura) ou supérieur
@@ -101,13 +76,6 @@
 2. Vérifier la cible macOS 13+ et les capacités Bluetooth.  
 3. **Build & Run** (⌘R). À la première exécution, macOS demandera l’autorisation **Bluetooth**.
 
-> `Info.plist` doit contenir la clé d’usage Bluetooth :
->
-> ```xml
-> <key>NSBluetoothAlwaysUsageDescription</key>
-> <string>This app uses Bluetooth to communicate with Aranet4 sensor.</string>
-> ```
-
 ---
 
 ## Utilisation
@@ -121,8 +89,6 @@
 L’app tient compte de :
 - **Nombre total** de lectures disponibles,  
 - **Intervalle** de mesure,  
-- **Âge** de la dernière lecture,  
-afin d’orchestrer proprement la récupération (éviter les lectures concurrentes, pagination si nécessaire).
 
 ### Affichage et filtres de période
 
@@ -141,7 +107,7 @@ date,co2,temperature,humidity,pressure
 
 ### Import CSV
 
-Menu **Importer** → sélection d’un fichier CSV **conforme** (en-tête identique).  
+Menu **Importer** → sélection d’un fichier CSV **conforme** (de l'application IOS du constructeur).  
 Les lignes sont **validées** et **fusionnées** dans l’historique de l’appareil sélectionné.
 
 > En cas d’échec (format incorrect), corrigez l’en-tête/les colonnes et réessayez.
@@ -201,39 +167,6 @@ macOS UI        └─ StatusBarManager.swift   (icône barre de menus, popover,
   - **Device Information (0x180A)** → `Firmware Revision (0x2A26)`  
   - **Battery Service (0x180F)** → `Battery Level (0x2A19)`
 
-**Décodage big‑endian (exemple d’helpers)** :
-
-```swift
-private extension Data {
-    @inline(__always) func beUInt16(at offset: Int) -> UInt16 {
-        precondition(count >= offset + 2, "Data too short")
-        return withUnsafeBytes { ptr in
-            let raw = ptr.load(fromByteOffset: offset, as: UInt16.self)
-            return UInt16(bigEndian: raw)
-        }
-    }
-    @inline(__always) func beInt16(at offset: Int) -> Int16 {
-        precondition(count >= offset + 2, "Data too short")
-        return withUnsafeBytes { ptr in
-            let raw = ptr.load(fromByteOffset: offset, as: Int16.self)
-            return Int16(bigEndian: raw)
-        }
-    }
-}
-```
-
-### Modèle de données
-
-```swift
-struct MeasurementRecord: Identifiable, Codable {
-    let id: UUID
-    let timestamp: Date
-    let co2: Int           // ppm (0…9999)
-    let temperature: Double// °C
-    let humidity: Double   // %
-    let pressure: Double   // hPa
-}
-```
 
 ### Stockage et fichiers générés
 
@@ -252,7 +185,7 @@ struct MeasurementRecord: Identifiable, Codable {
 
 ---
 
-## Dépannage
+## Dépannage (dans xcode)
 
 - **Aucun appareil détecté**
   - Vérifiez que le **Bluetooth** macOS est **activé**.
@@ -284,22 +217,6 @@ struct MeasurementRecord: Identifiable, Codable {
 - **Frameworks** : `SwiftUI`, `Charts`, `CoreBluetooth`, `AppKit`, `UniformTypeIdentifiers`
 
 > Pas de dépendances `CocoaPods` / `SwiftPM` externes non standard à ce stade (à adapter selon le projet).
-
-### Qualité et style
-
-- Utiliser `@MainActor` pour les services/managers exposant de l’état UI.  
-- Éviter les **captures fortes** dans les closures BLE/Timer.  
-- Séparer **scan/association** (DeviceManager) de **lecture & historique** (Aranet4Service).  
-- Tester : appareils multiples, renommage, import/export, filtres, scheduling.
-
-### Roadmap
-
-- [ ] Pagination plus robuste de l’historique (blocs & reprise).  
-- [ ] **Icône** et **captures** (AppIcon, README).  
-- [ ] Préférences avancées (seuils CO₂ → couleurs, unités, thèmes).  
-- [ ] Notifications (seuils CO₂ dépassés).  
-- [ ] Extraction en **Swift Packages** (CSVManager/HistoryStorage).  
-- [ ] CI (lint + build + notarisation si distribution).
 
 ---
 

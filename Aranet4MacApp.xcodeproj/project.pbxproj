@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B24D1F5C2EAD725B0002B2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1B2C3D4E5F60718293A4B66 /* Assets.xcassets */; };
+		B2D7E7C72EABF6B8003ADC2B /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7E7C62EABF6B8003ADC2B /* Scheduler.swift */; };
+		B2D7E7C82EABF6B8003ADC2B /* HistoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7E7C42EABF6B8003ADC2B /* HistoryStorage.swift */; };
+		B2D7E7C92EABF6B8003ADC2B /* MeasurementRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7E7C52EABF6B8003ADC2B /* MeasurementRecord.swift */; };
+		B2D7E7CA2EABF6B8003ADC2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7E7C22EABF6B8003ADC2B /* ContentView.swift */; };
+		B2D7E7CB2EABF6B8003ADC2B /* Aranet4Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7E7C12EABF6B8003ADC2B /* Aranet4Service.swift */; };
+		B2D7E7CC2EABF6B8003ADC2B /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7E7C32EABF6B8003ADC2B /* CSVManager.swift */; };
+		B2D7E7CF2EAC23E7003ADC2B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7E7CE2EAC23E7003ADC2B /* Device.swift */; };
+		B2D7E7D22EAC26CB003ADC2B /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D7E7D02EAC24B4003ADC2B /* DeviceManager.swift */; };
+		B2DAAFBA2EAD62EE00564989 /* StatusBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAFB92EAD62EE00564989 /* StatusBarManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B1B2C3D4E5F60718293A4B64 /* Aranet4MacApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aranet4MacApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B2C3D4E5F60718293A4B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1B2C3D4E5F60718293A4B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2D7E7C12EABF6B8003ADC2B /* Aranet4Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aranet4Service.swift; sourceTree = "<group>"; };
+		B2D7E7C22EABF6B8003ADC2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B2D7E7C32EABF6B8003ADC2B /* CSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVManager.swift; sourceTree = "<group>"; };
+		B2D7E7C42EABF6B8003ADC2B /* HistoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStorage.swift; sourceTree = "<group>"; };
+		B2D7E7C52EABF6B8003ADC2B /* MeasurementRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementRecord.swift; sourceTree = "<group>"; };
+		B2D7E7C62EABF6B8003ADC2B /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
+		B2D7E7CD2EABF6BA003ADC2B /* Aranet4MacApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aranet4MacApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2D7E7CE2EAC23E7003ADC2B /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		B2D7E7D02EAC24B4003ADC2B /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		B2DAAFB92EAD62EE00564989 /* StatusBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1B2C3D4E5F60718293A4B60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1B2C3D4E5F60718293A4B5D = {
+			isa = PBXGroup;
+			children = (
+				B1B2C3D4E5F60718293A4B65,
+				B1B2C3D4E5F60718293A4B64 /* Aranet4MacApp.app */,
+			);
+			sourceTree = "<group>";
+		};
+		B1B2C3D4E5F60718293A4B65 = {
+			isa = PBXGroup;
+			children = (
+				B2D7E7CE2EAC23E7003ADC2B /* Device.swift */,
+				B2D7E7D02EAC24B4003ADC2B /* DeviceManager.swift */,
+				B1B2C3D4E5F60718293A4B66 /* Assets.xcassets */,
+				B1B2C3D4E5F60718293A4B67 /* Info.plist */,
+				B2D7E7C12EABF6B8003ADC2B /* Aranet4Service.swift */,
+				B2D7E7C22EABF6B8003ADC2B /* ContentView.swift */,
+				B2D7E7C32EABF6B8003ADC2B /* CSVManager.swift */,
+				B2D7E7C42EABF6B8003ADC2B /* HistoryStorage.swift */,
+				B2DAAFB92EAD62EE00564989 /* StatusBarManager.swift */,
+				B2D7E7C52EABF6B8003ADC2B /* MeasurementRecord.swift */,
+				B2D7E7C62EABF6B8003ADC2B /* Scheduler.swift */,
+				B2D7E7CD2EABF6BA003ADC2B /* Aranet4MacApp-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1B2C3D4E5F60718293A4B5E /* Aranet4MacApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1B2C3D4E5F60718293A4B63 /* Build configuration list for PBXNativeTarget "Aranet4MacApp" */;
+			buildPhases = (
+				B1B2C3D4E5F60718293A4B5F /* Sources */,
+				B1B2C3D4E5F60718293A4B60 /* Frameworks */,
+				B1B2C3D4E5F60718293A4B61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aranet4MacApp;
+			productName = Aranet4MacApp;
+			productReference = B1B2C3D4E5F60718293A4B64 /* Aranet4MacApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1B2C3D4E5F60718293A4B5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2600;
+				ORGANIZATIONNAME = Aranet4Mac;
+				TargetAttributes = {
+					B1B2C3D4E5F60718293A4B5E = {
+						LastSwiftMigration = 2600;
+					};
+				};
+			};
+			buildConfigurationList = B1B2C3D4E5F60718293A4B62 /* Build configuration list for PBXProject "Aranet4MacApp" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1B2C3D4E5F60718293A4B5D;
+			productRefGroup = B1B2C3D4E5F60718293A4B5D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1B2C3D4E5F60718293A4B5E /* Aranet4MacApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1B2C3D4E5F60718293A4B61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24D1F5C2EAD725B0002B2F8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1B2C3D4E5F60718293A4B5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2DAAFBA2EAD62EE00564989 /* StatusBarManager.swift in Sources */,
+				B2D7E7D22EAC26CB003ADC2B /* DeviceManager.swift in Sources */,
+				B2D7E7C72EABF6B8003ADC2B /* Scheduler.swift in Sources */,
+				B2D7E7C82EABF6B8003ADC2B /* HistoryStorage.swift in Sources */,
+				B2D7E7C92EABF6B8003ADC2B /* MeasurementRecord.swift in Sources */,
+				B2D7E7CA2EABF6B8003ADC2B /* ContentView.swift in Sources */,
+				B2D7E7CB2EABF6B8003ADC2B /* Aranet4Service.swift in Sources */,
+				B2D7E7CF2EAC23E7003ADC2B /* Device.swift in Sources */,
+				B2D7E7CC2EABF6B8003ADC2B /* CSVManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B1B2C3D4E5F60718293A7000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Art a Net";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Aranet4MacApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Aranet4MacApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B1B2C3D4E5F60718293A7001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Art a Net";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Aranet4MacApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Aranet4MacApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1B2C3D4E5F60718293A4B62 /* Build configuration list for PBXProject "Aranet4MacApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B2C3D4E5F60718293A7000 /* Debug */,
+				B1B2C3D4E5F60718293A7001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B1B2C3D4E5F60718293A4B63 /* Build configuration list for PBXNativeTarget "Aranet4MacApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B2C3D4E5F60718293A7000 /* Debug */,
+				B1B2C3D4E5F60718293A7001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1B2C3D4E5F60718293A4B5C /* Project object */;
+}

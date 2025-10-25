@@ -3,7 +3,7 @@
 > Application macOS (SwiftUI) pour connecter, lire et synchroniser un capteur **Aranet4** via **Bluetooth Low Energy**, afficher des **graphiques** (CO₂, température, humidité, pression), exporter/importer en **CSV**, gérer **plusieurs appareils** et planifier des **récupérations automatiques** au-delà de 4 mois.
 
 <p align="center">
-  <img src="[Aranet4MacApp/Aranet4.icns](https://github.com/Kinkazma/Aranet-MacApp/blob/main/Aranet4.icns)" alt="Icône Aranet4MacApp" width="96" />
+  <img src="[Aranet4MacApp/Aranet4.icns](https://github.com/Kinkazma/Aranet-MacApp/blob/main/Aranet4.icns]" alt="Icône Aranet4MacApp" width="96" />
 </p>
 
 ---

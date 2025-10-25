@@ -173,7 +173,7 @@ macOS UI        └─ StatusBarManager.swift   (icône barre de menus, popover,
 - Répertoire applicatif : `~/Library/Application Support/Aranet4MacApp/`  
   - `CSVLogs/` : journaux CSV **par synchronisation**  
   - `history_full.csv` : **historique agrégé** de toutes les mesures  
-- Exports : par défaut dans `~/Documents/` (ou chemin choisi via le panneau d’enregistrement).
+- Exports : par défaut dans `~/Documents/`.
 
 ---
 
